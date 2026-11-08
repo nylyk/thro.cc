@@ -29,25 +29,30 @@
           </p>
           <div class="mt-10 flex justify-center gap-4">
             <a
-              href="https://github.com/nylyk/throcc#run-a-server"
+              href="https://github.com/nylyk/throcc#get-the-client"
               class="rounded-full bg-accent px-6 py-3 font-medium text-ink hover:bg-accent/90"
-              >Run a server</a
+              >Get the client</a
             >
             <a
-              href="https://github.com/nylyk/throcc#get-the-client"
+              href="https://github.com/nylyk/throcc#run-a-server"
               class="rounded-full border border-paper/20 px-6 py-3 font-medium hover:border-paper/40"
-              >Get the client</a
+              >Run a server</a
             >
           </div>
         </section>
 
-        <img
-          src="/room.png"
-          alt="A throcc room with a screen share playing"
-          width="2560"
-          height="1602"
-          class="rounded-xl border border-paper/10 shadow-2xl shadow-accent/10"
-        />
+        <div class="tilt">
+          <div class="tilt-card rounded-xl border border-paper/10 shadow-2xl shadow-accent/10">
+            <img
+              src="/room.png"
+              alt="A throcc room with a screen share playing"
+              width="2560"
+              height="1602"
+              class="rounded-xl"
+            />
+            <div class="tilt-glare"></div>
+          </div>
+        </div>
 
         <section class="grid gap-x-10 gap-y-8 py-24 sm:grid-cols-2">
           <div>
@@ -79,5 +84,20 @@
         throcc is free software under the AGPL-3.0.
       </footer>
     </div>
+    <script>
+      const tilt = document.querySelector(".tilt");
+      tilt.addEventListener("pointermove", (e) => {
+        if (e.pointerType !== "mouse") return;
+        const rect = tilt.getBoundingClientRect();
+        const x = (e.clientX - rect.left) / rect.width;
+        const y = (e.clientY - rect.top) / rect.height;
+        tilt.style.setProperty("--tilt-x", `${(0.5 - y) * 8}deg`);
+        tilt.style.setProperty("--tilt-y", `${(x - 0.5) * 12}deg`);
+        tilt.style.setProperty("--light-x", `${x * 100}%`);
+        tilt.style.setProperty("--light-y", `${y * 100}%`);
+        tilt.style.setProperty("--hover", "1");
+      });
+      tilt.addEventListener("pointerleave", () => tilt.removeAttribute("style"));
+    </script>
   </body>
 </html>
