@@ -5,6 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>throcc</title>
     <meta name="description" content="Self-hosted voice and screen share, end-to-end encrypted. Written in Rust." />
+    <meta name="theme-color" content="#d07a93" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="throcc" />
+    <meta property="og:url" content="https://thro.cc/" />
+    <meta property="og:title" content="throcc: hop in and hang out, on your own server" />
+    <meta
+      property="og:description"
+      content="Voice chat and screen share for you and your friends. Self-hosted, end-to-end encrypted and written in Rust."
+    />
+    <meta property="og:image" content="https://thro.cc/og.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="The throcc frog next to a throcc call with a Minecraft screen share" />
+    <meta name="twitter:card" content="summary_large_image" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="/main.css" />
   </head>
@@ -42,22 +56,19 @@
           </div>
         </section>
 
-        <div class="tilt mt-16">
-          <div class="tilt-card rounded-xl border border-paper/10 shadow-2xl shadow-accent/10">
-            <img
-              src="/room.png"
-              alt="A throcc room with a screen share playing"
-              width="2560"
-              height="1602"
-              class="rounded-xl"
-            />
-            <div class="tilt-glare"></div>
-          </div>
-        </div>
+        <img
+          src="/room.webp"
+          alt="A throcc room with a screen share playing"
+          width="2048"
+          height="1282"
+          loading="lazy"
+          decoding="async"
+          class="mt-16 rounded-xl border border-paper/10 shadow-2xl shadow-accent/10"
+        />
 
         <section class="grid gap-10 py-24 sm:grid-cols-2">
           <div class="group flex items-center gap-5">
-            <span class="mascot size-14 shrink-0 group-hover:animate-wiggle" style="--mascot: url(/mascot/sing.svg)"></span>
+            <span class="mascot size-14 shrink-0 motion-safe:group-hover:animate-wiggle" style="--mascot: url(/mascot/sing.svg)"></span>
             <div>
               <h2 class="font-semibold">Talk like you're in the same room</h2>
               <p class="mt-2 text-paper/70">
@@ -68,7 +79,7 @@
           </div>
           <div class="group flex items-center gap-5">
             <span
-              class="mascot size-14 shrink-0 group-hover:animate-wiggle"
+              class="mascot size-14 shrink-0 motion-safe:group-hover:animate-wiggle"
               style="--mascot: url(/mascot/hypnotized.svg)"
             ></span>
             <div>
@@ -79,7 +90,7 @@
             </div>
           </div>
           <div class="group flex items-center gap-5">
-            <span class="mascot size-14 shrink-0 group-hover:animate-wiggle" style="--mascot: url(/mascot/muted.svg)"></span>
+            <span class="mascot size-14 shrink-0 motion-safe:group-hover:animate-wiggle" style="--mascot: url(/mascot/muted.svg)"></span>
             <div>
               <h2 class="font-semibold">Lips sealed</h2>
               <p class="mt-2 text-paper/70">
@@ -88,7 +99,7 @@
             </div>
           </div>
           <div class="group flex items-center gap-5">
-            <span class="mascot size-14 shrink-0 group-hover:animate-wiggle" style="--mascot: url(/mascot/asleep.svg)"></span>
+            <span class="mascot size-14 shrink-0 motion-safe:group-hover:animate-wiggle" style="--mascot: url(/mascot/asleep.svg)"></span>
             <div>
               <h2 class="font-semibold">Hosting you can sleep through</h2>
               <p class="mt-2 text-paper/70">
@@ -113,20 +124,5 @@
         throcc is free software under the AGPL-3.0.
       </footer>
     </div>
-    <script>
-      const tilt = document.querySelector(".tilt");
-      tilt.addEventListener("pointermove", (e) => {
-        if (e.pointerType !== "mouse") return;
-        const rect = tilt.getBoundingClientRect();
-        const x = (e.clientX - rect.left) / rect.width;
-        const y = (e.clientY - rect.top) / rect.height;
-        tilt.style.setProperty("--tilt-x", `${(0.5 - y) * 8}deg`);
-        tilt.style.setProperty("--tilt-y", `${(x - 0.5) * 12}deg`);
-        tilt.style.setProperty("--light-x", `${x * 100}%`);
-        tilt.style.setProperty("--light-y", `${y * 100}%`);
-        tilt.style.setProperty("--hover", "1");
-      });
-      tilt.addEventListener("pointerleave", () => tilt.removeAttribute("style"));
-    </script>
   </body>
 </html>
