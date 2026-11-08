@@ -4,6 +4,25 @@
   --color-ink: #0c0d11;
   --color-paper: #ecedf3;
   --color-accent: #d07a93;
+  --color-muted: #8e92a6;
+
+  --animate-bob: bob 4s ease-in-out infinite;
+  --animate-wiggle: wiggle 0.5s ease-in-out;
+
+  @keyframes bob {
+    50% {
+      transform: translateY(-8px) rotate(-4deg);
+    }
+  }
+
+  @keyframes wiggle {
+    25% {
+      rotate: -10deg;
+    }
+    75% {
+      rotate: 10deg;
+    }
+  }
 }
 
 @property --tilt-x {
@@ -37,6 +56,12 @@
 }
 
 @layer components {
+  .mascot {
+    aspect-ratio: 1;
+    background-color: currentColor;
+    mask: var(--mascot) center / contain no-repeat;
+  }
+
   .tilt {
     position: relative;
     isolation: isolate;

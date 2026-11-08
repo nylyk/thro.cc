@@ -19,29 +19,30 @@
       </header>
 
       <main>
-        <section class="py-20 text-center sm:py-28">
-          <h1 class="text-4xl font-semibold tracking-tight text-balance sm:text-6xl">
-            Voice and screen share,<br />
+        <section class="py-16 text-center sm:py-24">
+          <span class="mascot mx-auto block size-36 text-muted motion-safe:animate-bob" style="--mascot: url(/mascot/cool.svg)"></span>
+          <h1 class="mt-6 text-4xl font-semibold tracking-tight text-balance sm:text-6xl">
+            Hop in and hang out,<br />
             <span class="text-accent">on your own server.</span>
           </h1>
           <p class="mx-auto mt-6 max-w-xl text-lg text-pretty text-paper/70">
-            Self-hosted and end-to-end encrypted. One binary, one data directory. Written in Rust.
+            Voice chat and screen share for you and your friends. Self-hosted, end-to-end encrypted and written in Rust.
           </p>
           <div class="mt-10 flex justify-center gap-4">
             <a
               href="https://github.com/nylyk/throcc#get-the-client"
-              class="rounded-full bg-accent px-6 py-3 font-medium text-ink hover:bg-accent/90"
+              class="rounded-full bg-accent px-6 py-3 font-medium text-ink transition hover:-translate-y-0.5 hover:bg-accent/90"
               >Get the client</a
             >
             <a
               href="https://github.com/nylyk/throcc#run-a-server"
-              class="rounded-full border border-paper/20 px-6 py-3 font-medium hover:border-paper/40"
+              class="rounded-full border border-paper/20 px-6 py-3 font-medium transition hover:-translate-y-0.5 hover:border-paper/40"
               >Run a server</a
             >
           </div>
         </section>
 
-        <div class="tilt">
+        <div class="tilt mt-16">
           <div class="tilt-card rounded-xl border border-paper/10 shadow-2xl shadow-accent/10">
             <img
               src="/room.png"
@@ -54,33 +55,61 @@
           </div>
         </div>
 
-        <section class="grid gap-x-10 gap-y-8 py-24 sm:grid-cols-2">
-          <div>
-            <h2 class="font-semibold">Low-latency voice</h2>
-            <p class="mt-2 text-paper/70">
-              Rooms of up to 30 people. Push-to-talk or voice activation, echo cancellation and noise suppression.
-            </p>
+        <section class="grid gap-10 py-24 sm:grid-cols-2">
+          <div class="group flex items-center gap-5">
+            <span class="mascot size-14 shrink-0 group-hover:animate-wiggle" style="--mascot: url(/mascot/sing.svg)"></span>
+            <div>
+              <h2 class="font-semibold">Talk like you're in the same room</h2>
+              <p class="mt-2 text-paper/70">
+                Low-latency voice for up to 30 people. Push-to-talk or voice activation, with echo cancellation and noise
+                suppression.
+              </p>
+            </div>
           </div>
-          <div>
-            <h2 class="font-semibold">Screen share up to 1440p60</h2>
-            <p class="mt-2 text-paper/70">
-              With system audio, five at a time. Hardware encoded as AV1, HEVC or H.264.
-            </p>
+          <div class="group flex items-center gap-5">
+            <span
+              class="mascot size-14 shrink-0 group-hover:animate-wiggle"
+              style="--mascot: url(/mascot/hypnotized.svg)"
+            ></span>
+            <div>
+              <h2 class="font-semibold">Screens worth staring at</h2>
+              <p class="mt-2 text-paper/70">
+                Share up to 1440p60 with system audio, five at a time. Everyone watches only the shares they pick.
+              </p>
+            </div>
           </div>
-          <div>
-            <h2 class="font-semibold">End-to-end encrypted</h2>
-            <p class="mt-2 text-paper/70">The server relays all media but holds no key.</p>
+          <div class="group flex items-center gap-5">
+            <span class="mascot size-14 shrink-0 group-hover:animate-wiggle" style="--mascot: url(/mascot/muted.svg)"></span>
+            <div>
+              <h2 class="font-semibold">Lips sealed</h2>
+              <p class="mt-2 text-paper/70">
+                Everything you say and share is end-to-end encrypted. The server passes it along but holds no key.
+              </p>
+            </div>
           </div>
-          <div>
-            <h2 class="font-semibold">Simple to host</h2>
-            <p class="mt-2 text-paper/70">
-              One server binary and one data directory. Joining takes an address and an invite code.
-            </p>
+          <div class="group flex items-center gap-5">
+            <span class="mascot size-14 shrink-0 group-hover:animate-wiggle" style="--mascot: url(/mascot/asleep.svg)"></span>
+            <div>
+              <h2 class="font-semibold">Hosting you can sleep through</h2>
+              <p class="mt-2 text-paper/70">
+                One server binary and one data directory. Friends join with an address and an invite code.
+              </p>
+            </div>
           </div>
+        </section>
+
+        <section class="pb-24 text-center">
+          <h2 class="text-3xl font-semibold tracking-tight">Ready to hop in?</h2>
+          <a
+            href="https://github.com/nylyk/throcc#get-the-client"
+            class="mt-8 inline-block rounded-full bg-accent px-6 py-3 font-medium text-ink transition hover:-translate-y-0.5 hover:bg-accent/90"
+            >Get the client</a
+          >
         </section>
       </main>
 
-      <footer class="border-t border-paper/10 py-8 text-sm text-paper/50">
+      <footer class="flex items-center justify-center gap-3 border-t border-paper/10 py-8 text-sm text-paper/50">
+        <span class="mascot size-12" style="--mascot: url(/mascot/love.svg)"></span>
         throcc is free software under the AGPL-3.0.
       </footer>
     </div>
