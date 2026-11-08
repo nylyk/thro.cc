@@ -1,0 +1,13 @@
+{
+  "name": "thro.cc",
+  "private": true,
+  "license": "AGPL-3.0-only",
+  "scripts": {
+    "build": "tailwindcss -i src/main.css -o public/main.css --minify",
+    "dev": "tailwindcss -i src/main.css -o public/main.css --watch"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.3.5",
+    "tailwindcss": "^4.3.5"
+  }
+}

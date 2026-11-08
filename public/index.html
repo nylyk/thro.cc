@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>throcc</title>
+    <meta name="description" content="Self-hosted voice and screen share, end-to-end encrypted. Written in Rust." />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="/main.css" />
+  </head>
+  <body class="bg-ink text-paper antialiased">
+    <div class="mx-auto max-w-5xl px-6">
+      <header class="flex items-center justify-between py-6">
+        <a href="/" class="flex items-center gap-2 font-semibold tracking-tight">
+          <img src="/favicon.svg" alt="" class="size-8" />
+          throcc
+        </a>
+        <a href="https://github.com/nylyk/throcc" class="text-sm text-paper/70 hover:text-paper">GitHub</a>
+      </header>
+
+      <main>
+        <section class="py-20 text-center sm:py-28">
+          <h1 class="text-4xl font-semibold tracking-tight text-balance sm:text-6xl">
+            Voice and screen share,<br />
+            <span class="text-accent">on your own server.</span>
+          </h1>
+          <p class="mx-auto mt-6 max-w-xl text-lg text-pretty text-paper/70">
+            Self-hosted and end-to-end encrypted. One binary, one data directory. Written in Rust.
+          </p>
+          <div class="mt-10 flex justify-center gap-4">
+            <a
+              href="https://github.com/nylyk/throcc#run-a-server"
+              class="rounded-full bg-accent px-6 py-3 font-medium text-ink hover:bg-accent/90"
+              >Run a server</a
+            >
+            <a
+              href="https://github.com/nylyk/throcc#get-the-client"
+              class="rounded-full border border-paper/20 px-6 py-3 font-medium hover:border-paper/40"
+              >Get the client</a
+            >
+          </div>
+        </section>
+
+        <img
+          src="/room.png"
+          alt="A throcc room with a screen share playing"
+          width="2560"
+          height="1602"
+          class="rounded-xl border border-paper/10 shadow-2xl shadow-accent/10"
+        />
+
+        <section class="grid gap-x-10 gap-y-8 py-24 sm:grid-cols-2">
+          <div>
+            <h2 class="font-semibold">Low-latency voice</h2>
+            <p class="mt-2 text-paper/70">
+              Rooms of up to 30 people. Push-to-talk or voice activation, echo cancellation and noise suppression.
+            </p>
+          </div>
+          <div>
+            <h2 class="font-semibold">Screen share up to 1440p60</h2>
+            <p class="mt-2 text-paper/70">
+              With system audio, five at a time. Hardware encoded as AV1, HEVC or H.264.
+            </p>
+          </div>
+          <div>
+            <h2 class="font-semibold">End-to-end encrypted</h2>
+            <p class="mt-2 text-paper/70">The server relays all media but holds no key.</p>
+          </div>
+          <div>
+            <h2 class="font-semibold">Simple to host</h2>
+            <p class="mt-2 text-paper/70">
+              One server binary and one data directory. Joining takes an address and an invite code.
+            </p>
+          </div>
+        </section>
+      </main>
+
+      <footer class="border-t border-paper/10 py-8 text-sm text-paper/50">
+        throcc is free software under the AGPL-3.0.
+      </footer>
+    </div>
+  </body>
+</html>
