@@ -1,28 +1,21 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: "Rubik";
+  font-weight: 300 900;
+  font-display: swap;
+  src: url(/fonts/rubik.woff2) format("woff2");
+}
+
 @theme {
+  --font-sans: "Rubik", ui-sans-serif, system-ui, sans-serif;
+
   --color-ink: #0c0d11;
   --color-paper: #ecedf3;
   --color-accent: #d07a93;
   --color-muted: #8e92a6;
 
-  --animate-bob: bob 4s ease-in-out infinite;
-  --animate-wiggle: wiggle 0.5s ease-in-out;
-
-  @keyframes bob {
-    50% {
-      transform: translateY(-8px) rotate(-4deg);
-    }
-  }
-
-  @keyframes wiggle {
-    25% {
-      rotate: -10deg;
-    }
-    75% {
-      rotate: 10deg;
-    }
-  }
+  --radius-window: 1.37% / 2.18%;
 }
 
 @layer components {
