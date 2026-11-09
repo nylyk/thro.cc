@@ -12,12 +12,15 @@
     <meta property="og:title" content="throcc: voice chat and screen sharing on your own server" />
     <meta
       property="og:description"
-      content="Voice chat and screen sharing for you and your friends. One of you runs the server and the rest join with an invite code."
+      content="Self-hosted, end-to-end encrypted and written in Rust. One of you runs the server and the rest join with an invite code."
     />
     <meta property="og:image" content="https://thro.cc/og.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="The throcc frog next to a throcc call with a Minecraft screen share" />
+    <meta
+      property="og:image:alt"
+      content="The throcc frog and the headline next to a throcc call watching a Minecraft screen share"
+    />
     <meta name="twitter:card" content="summary_large_image" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="/main.css" />
@@ -33,11 +36,16 @@
       </header>
 
       <main>
-        <section class="flex flex-col-reverse gap-10 pt-16 pb-12 sm:flex-row sm:items-start sm:justify-between sm:pt-24">
+        <section
+          class="flex flex-col-reverse gap-10 pt-16 pb-12 sm:flex-row sm:items-start sm:justify-between sm:pt-24"
+        >
           <div class="max-w-xl">
-            <h1 class="text-4xl font-semibold text-balance sm:text-5xl">Voice chat and screen sharing for you and your friends.</h1>
+            <h1 class="text-4xl font-semibold text-balance sm:text-5xl">
+              Voice chat and screen sharing for you and your friends.
+            </h1>
             <p class="mt-6 text-lg text-pretty text-paper/70">
-              One of you runs the server and the rest join with its address and an invite code.
+              Self-hosted, end-to-end encrypted and written in Rust. One of you runs the server and the rest join with
+              an invite code.
             </p>
             <div class="mt-10 flex flex-wrap items-center gap-x-6 gap-y-4">
               <a
@@ -52,7 +60,10 @@
               >
             </div>
           </div>
-          <span class="mascot block size-28 shrink-0 text-muted sm:mr-32 sm:size-40" style="--mascot: url(/mascot/cool.svg)"></span>
+          <span
+            class="mascot block size-28 shrink-0 text-muted sm:mr-32 sm:size-40"
+            style="--mascot: url(/mascot/cool.svg)"
+          ></span>
         </section>
 
         <img
@@ -73,7 +84,8 @@
                 <span class="mascot size-10 rotate-6 text-muted" style="--mascot: url(/mascot/sing.svg)"></span>
               </h2>
               <p class="mt-4 text-pretty text-paper/70">
-                Calls hold up to 30 people. Voice is encoded with Opus, so everyone sounds clear and natural.
+                Rooms with up to 30 people. Audio is encoded with high-quality Opus, so everyone sounds clear and
+                natural.
               </p>
             </div>
             <img
@@ -91,12 +103,14 @@
             <div class="sm:order-last">
               <h2 class="text-2xl font-semibold">Screen share</h2>
               <p class="mt-4 text-pretty text-paper/70">
-                Screens go out at up to 1440p and 60 fps, with system audio. Five people can share at once, and you pick
-                which ones to watch.
+                Share your screen at up to 1440p and 60 fps, with system audio. You pick which shares to watch.
               </p>
             </div>
             <div class="relative">
-              <span class="mascot absolute -top-9 right-8 size-12 text-muted" style="--mascot: url(/mascot/hypnotized.svg)"></span>
+              <span
+                class="mascot absolute -top-9 right-8 size-12 text-muted"
+                style="--mascot: url(/mascot/hypnotized.svg)"
+              ></span>
               <img
                 src="/share.webp"
                 alt="The Share Your Screen dialog with resolution, frame rate, bitrate and computer audio options"
@@ -116,8 +130,8 @@
                 <span class="mascot size-10 -rotate-6 text-muted" style="--mascot: url(/mascot/muted.svg)"></span>
               </h2>
               <p class="mt-4 text-pretty text-paper/70">
-                Voice and screen shares are end-to-end encrypted. The server forwards them without the keys to decrypt
-                them. Compare safety numbers with someone to check it's really them.
+                Voice and screen shares are end-to-end encrypted. The server forwards them but can't listen in. Compare
+                safety numbers with someone to check it's really them.
               </p>
             </div>
             <img
@@ -134,19 +148,23 @@
           <div class="grid items-center gap-8 sm:grid-cols-2 sm:gap-12">
             <div class="sm:order-last">
               <h2 class="text-2xl font-semibold">Hosting</h2>
-              <p class="mt-4 text-pretty text-paper/70">
-                The server is a single binary that keeps all its data in one directory. Start it with Docker Compose and
-                open UDP port 8476.
-              </p>
+              <p class="mt-4 text-pretty text-paper/70">Start the server with Docker Compose and open UDP port 8476.</p>
               <a
                 href="https://github.com/nylyk/throcc#server"
                 class="mt-6 inline-block font-medium underline decoration-paper/30 underline-offset-4 hover:decoration-paper"
                 >Learn how to host a server</a
               >
             </div>
-            <div class="relative flex items-center rounded-md border border-paper/10 bg-paper/5 p-6 sm:aspect-[2048/1282]">
-              <span class="mascot absolute -right-3 -bottom-5 size-12 rotate-12 text-muted" style="--mascot: url(/mascot/asleep.svg)"></span>
-              <pre class="overflow-x-auto font-mono text-xs leading-snug text-paper/80 sm:text-sm"><code><span class="text-accent">services</span><span class="text-muted">:</span>
+            <div
+              class="relative flex items-center rounded-md border border-paper/10 bg-paper/5 p-6 sm:aspect-[2048/1282]"
+            >
+              <span
+                class="mascot absolute -right-3 -bottom-5 size-12 rotate-12 text-muted"
+                style="--mascot: url(/mascot/asleep.svg)"
+              ></span>
+              <pre
+                class="overflow-x-auto font-mono text-xs leading-snug text-paper/80 sm:text-sm"
+              ><code><span class="text-accent">services</span><span class="text-muted">:</span>
   <span class="text-accent">throcc</span><span class="text-muted">:</span>
     <span class="text-accent">image</span><span class="text-muted">:</span> ghcr.io/nylyk/throcc:latest
     <span class="text-accent">container_name</span><span class="text-muted">:</span> throcc
@@ -163,7 +181,9 @@
         </div>
       </main>
 
-      <footer class="flex flex-col items-center justify-center gap-3 py-8 text-center text-sm text-paper/50 sm:flex-row">
+      <footer
+        class="flex flex-col items-center justify-center gap-3 py-8 text-center text-sm text-paper/50 sm:flex-row"
+      >
         <span class="mascot size-12" style="--mascot: url(/mascot/love.svg)"></span>
         throcc is written in Rust and licensed under the AGPL-3.0.
       </footer>
