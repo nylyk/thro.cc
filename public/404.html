@@ -9,26 +9,21 @@
     <link rel="preload" href="/fonts/rubik.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="stylesheet" href="/main.css" />
   </head>
-  <body class="bg-ink text-paper antialiased">
-    <div class="mx-auto flex min-h-dvh max-w-5xl flex-col px-6">
-      <header class="flex items-center justify-between py-6">
-        <a href="/" class="flex items-center gap-2 font-semibold">
-          <img src="/images/favicon.svg" alt="" class="size-8" />
+  <body>
+    <div class="page">
+      <header class="site-header">
+        <a href="/" class="brand">
+          <img src="/images/favicon.svg" alt="" />
           throcc
         </a>
-        <a href="https://github.com/nylyk/throcc" class="text-sm text-paper/70 hover:text-paper">GitHub</a>
+        <a href="https://github.com/nylyk/throcc" class="nav-link">GitHub</a>
       </header>
 
-      <main class="flex flex-1 flex-col items-center justify-center pb-24 text-center">
-        <span
-          class="mascot block size-28 text-muted sm:size-40"
-          style="--mascot: url(/images/mascot/glitch.svg)"
-        ></span>
-        <h1 class="mt-8 text-4xl font-semibold text-balance sm:text-5xl">Page not found</h1>
-        <p class="mt-6 text-lg text-pretty text-paper/70">There is nothing at this address.</p>
-        <a href="/" class="mt-10 rounded-md bg-accent px-5 py-2.5 font-medium text-ink hover:bg-accent/90"
-          >Back to the homepage</a
-        >
+      <main class="not-found">
+        <span class="mascot" style="--mascot: url(/images/mascot/glitch.svg)"></span>
+        <h1>Page not found</h1>
+        <p class="lead">There is nothing at this address.</p>
+        <a href="/" class="button">Back to the homepage</a>
       </main>
     </div>
   </body>
