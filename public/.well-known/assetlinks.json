@@ -1,0 +1,13 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "cc.thro.throcc",
+      "sha256_cert_fingerprints": [
+        "AF:12:99:BB:EF:76:A1:5D:7B:54:21:49:BB:E2:0E:35:90:E7:48:5C:82:B1:2D:12:2C:9B:A8:C6:68:F4:BE:CB",
+        "E6:9B:75:20:7B:F5:1E:69:45:BB:B0:55:B4:C4:37:8C:41:4B:B8:07:BF:CF:89:DF:EB:CF:BB:D6:1C:76:2E:81"
+      ]
+    }
+  }
+]

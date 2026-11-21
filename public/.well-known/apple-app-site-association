@@ -1,0 +1,10 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["58ZLB553RJ.cc.thro.throcc"],
+        "components": [{ "/": "/join" }]
+      }
+    ]
+  }
+}

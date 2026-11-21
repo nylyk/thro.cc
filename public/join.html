@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self'; base-uri 'none'; form-action 'none'"
+    />
+    <meta name="referrer" content="no-referrer" />
+    <meta name="robots" content="noindex" />
+    <title>Join a server | throcc</title>
+    <meta name="theme-color" content="#d07a93" />
+    <link rel="icon" href="/images/favicon.svg" type="image/svg+xml" />
+    <link rel="preload" href="/fonts/rubik.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="/main.css" />
+    <script src="/join.js" defer></script>
+  </head>
+  <body>
+    <div class="page">
+      <header class="site-header">
+        <a href="/" class="brand">
+          <img src="/images/favicon.svg" alt="" />
+          throcc
+        </a>
+        <a href="https://github.com/nylyk/throcc" class="nav-link">GitHub</a>
+      </header>
+
+      <main class="join">
+        <section id="invite" hidden>
+          <span class="mascot mascot-love"></span>
+          <h1>You’re invited to a throcc server</h1>
+          <p class="lead" id="desktop-lead">Open the invite in throcc to join.</p>
+          <p class="lead" id="phone-lead" hidden>Open throcc, add a server and enter this address and invite code.</p>
+          <dl class="invite-details">
+            <div>
+              <dt>Address</dt>
+              <dd><code id="address"></code></dd>
+              <button type="button" class="copy" data-copy="address">Copy</button>
+            </div>
+            <div>
+              <dt>Invite code</dt>
+              <dd><code id="code"></code></dd>
+              <button type="button" class="copy" data-copy="code">Copy</button>
+            </div>
+          </dl>
+          <div class="join-actions" id="desktop-actions">
+            <a id="open" class="button">Open in throcc</a>
+            <a href="https://github.com/nylyk/throcc/releases/latest" class="link">Download throcc</a>
+          </div>
+        </section>
+
+        <section id="broken" hidden>
+          <span class="mascot mascot-glitch"></span>
+          <h1>This invite link is incomplete</h1>
+          <p class="lead">Ask for the link again, or join with the server’s address and invite code in throcc.</p>
+        </section>
+
+        <noscript>
+          <h1>Turn on JavaScript to read this invite</h1>
+          <p class="lead">The invite stays in your browser. It is never sent to thro.cc.</p>
+        </noscript>
+      </main>
+    </div>
+  </body>
+</html>
