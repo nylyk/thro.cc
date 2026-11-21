@@ -55,7 +55,7 @@ function show(invite) {
   }
   const link = `throcc://join#${encodeURIComponent(invite.address).replaceAll("%3A", ":")}+${invite.code}`;
   document.getElementById("open").href = link;
-  location.href = link;
+  addEventListener("load", () => setTimeout(() => (location.href = link), 100));
 }
 
 const invite = parseInvite(location.hash.slice(1));
