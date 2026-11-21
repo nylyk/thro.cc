@@ -5,6 +5,7 @@ const ID_CHARS = 3;
 const SECRET_CHARS = 5;
 
 function parseCode(text) {
+  if (!/^[!-~]+$/.test(text)) return null;
   let chars = "";
   for (const c of text.toUpperCase()) {
     if (c === "-") continue;
@@ -26,7 +27,7 @@ function parseInvite(fragment) {
     return null;
   }
   const code = parseCode(fragment.slice(plus + 1));
-  if (!code || address.length > 255 || /[\s\p{Cc}+\/\\@?#]/u.test(address)) return null;
+  if (!code || address.length > 255 || !/^[!-~]+$/.test(address) || /[+\/\\@?#]/.test(address)) return null;
   return { address, code };
 }
 
