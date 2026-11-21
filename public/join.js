@@ -26,7 +26,7 @@ function parseInvite(fragment) {
     return null;
   }
   const code = parseCode(fragment.slice(plus + 1));
-  if (!code || address.length > 253 || /[\s+\/\\@?#]/.test(address)) return null;
+  if (!code || address.length > 255 || /[\s\p{Cc}+\/\\@?#]/u.test(address)) return null;
   return { address, code };
 }
 
